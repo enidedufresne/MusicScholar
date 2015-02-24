@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+
+.music {
+	text-align: center;
+}
+
+.genre {
+	text-align: center;
+}
