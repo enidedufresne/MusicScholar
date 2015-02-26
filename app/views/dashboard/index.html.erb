@@ -2,19 +2,45 @@
 
 <h1>Your Dashboard</h1>
 
-<iframe id="ytplayer" 
-	type="text/html" width="640" 
-	height="390"
-	
-	
-	
-	
-	
-	start="2"
-	src="http://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&showinfo=0&iv_load_policy=3&origin=http://example.com"
-	frameborder="0"
-	> 
+<div id="player"></div>
+<div id="options">
+	<ul>
+		<% @question[:options].each do |option| %>
+		  <li><%= option %></li>
+		<% end %>
+	</ul>
+</div>
 
+<<<<<<< HEAD
 </iframe> 
 </div>
 <%= link_to 'Start Game' %>
+=======
+<%= javascript_tag do %>
+
+onYouTubeIframeAPIReady = function() {
+	console.log("iframe is ready");
+	player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: '<%= @question[:youtube_id] %>', 
+          playerVars: { // 'playlist':['kt0g4dWxEBo', 'k4YRWT_Aldo'], 
+                        'autoplay': 1, 
+                        'start': 20, 
+                        'end': 30, 
+                        'theme': 'light', 
+                        'autohide': 1, 
+                        'fs': 0, 
+                        'iv_load_policy': 3, 
+                        'modestbranding': 1, 
+                        'rel': 0, 
+                        'showinfo': 0},
+          //events: {
+          //  'onReady': onPlayerReady,
+          //  'onStateChange': onPlayerStateChange
+          //}
+        }
+    );
+}
+<% end %>
+>>>>>>> b1a3b8ff2e7f1165296eb2c48ef5eae951bd39c4
