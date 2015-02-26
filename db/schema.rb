@@ -11,18 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150226143241) do
+ActiveRecord::Schema.define(version: 20150226191326) do
 
   create_table "artists", force: :cascade do |t|
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "name"
     t.integer  "category_id"
-    t.integer  "question_id"
   end
 
   add_index "artists", ["category_id"], name: "index_artists_on_category_id"
-  add_index "artists", ["question_id"], name: "index_artists_on_question_id"
 
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -61,7 +59,10 @@ ActiveRecord::Schema.define(version: 20150226143241) do
   create_table "questions", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "artist_id"
   end
+
+  add_index "questions", ["artist_id"], name: "index_questions_on_artist_id"
 
   create_table "responses", force: :cascade do |t|
     t.datetime "created_at", null: false
