@@ -16,16 +16,16 @@ ActiveRecord::Schema.define(version: 20150226191326) do
   create_table "artists", force: :cascade do |t|
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "name"
     t.integer  "category_id"
   end
 
   add_index "artists", ["category_id"], name: "index_artists_on_category_id"
 
   create_table "categories", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.string   "name"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "facts", force: :cascade do |t|
