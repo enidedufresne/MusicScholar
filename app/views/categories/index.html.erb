@@ -1,10 +1,12 @@
 <div class="music">
-<h1>Please Choose a Genre</h1>
+<h1>Choose a Genre.</h1>
 </div>
+
 <div class="genre">
- <%= button_to "Hip-Hop", questions_path, :method => "get" %>
-
-<%= button_to "Reggae", questions_path, :method => "get" %>
-
-<%= button_to "R&B", questions_path, :method => "get" %>
+ <% @categories.each do |category| %>
+	 <%= link_to category.name, category %>
+ 	<% end %>
 </div>
+
+
+

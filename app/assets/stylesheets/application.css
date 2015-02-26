@@ -14,11 +14,54 @@
  *= require_self
  */
 
+/*
+centered all  headers and tags in center*/
 
 .music {
+	text-align: center;
+}
+
+.rap {
+	text-align: center;
+}
+
+.rasta {
+	text-align: center;
+	font-size: 40px;
+}
+
+.slow-jamz {
+	text-align: center;
+	font-size: 50px;
+}
+
+.Hip-hop {
+	text-align: center;
+}
+
+.artists {
+	text-align: center;
+}
+
+.jigga {
+	text-align: center;
+}
+
+.cube {
+	text-align: center;
+	font-size: 40px;
+}
+
+.musician {
+	text-align: center;
+	font-size: 40px;
+}
+
+.quiz {
 	text-align: center;
 }
 
 .genre {
 	text-align: center;
 }
+

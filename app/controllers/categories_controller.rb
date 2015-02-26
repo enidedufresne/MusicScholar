@@ -4,13 +4,17 @@ class CategoriesController < ApplicationController
 	end
 
 	def index
+		@categories = Category.all
+	end
+
+	def show
+		@category = Category.find(params[:id])
 	end
 
 	def edit
-		@categories = @questions.find_by_id parms[:id]
 	end
 
-	def ask_question
-		@categories = @questions.categories
+	def choose_artist
+		@categories = @artist.categories
 	end
 end

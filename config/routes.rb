@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
   devise_for :players
   resources :dashboard
-  resources :categories
-  resources :questions
+  resources :categories do
+    resources :artists   do
+      resources :questions
+    end
+  end
+
+  get '/categories' => 'categories#index'
+  get '/artists' => 'artists#index'
 
   root :to => "home#index"
   # The priority is based upon order of creation: first created -> highest priority.
