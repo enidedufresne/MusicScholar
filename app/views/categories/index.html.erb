@@ -1,3 +1,10 @@
+<div class="music">
 <h1>Please Choose a Genre</h1>
+</div>
+<div class="genre">
+ <%= button_to "Hip-Hop", questions_path, :method => "get" %>
 
-<%= select_tag :category, options_for_select(['Reggae', 'Hip Hop', 'R&b']), :prompt => 'Select One' %>
+<%= button_to "Reggae", questions_path, :method => "get" %>
+
+<%= button_to "R&B", questions_path, :method => "get" %>
+</div>
