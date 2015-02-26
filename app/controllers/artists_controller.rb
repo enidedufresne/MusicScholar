@@ -7,6 +7,10 @@ class ArtistsController < ApplicationController
 		@artist = Artist.all
 	end
 
+	def show
+		@artist = Artist.find(parms[:id])
+	end
+
 	def edit
 	end
 

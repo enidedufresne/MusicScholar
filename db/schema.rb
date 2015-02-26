@@ -11,21 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225225815) do
+ActiveRecord::Schema.define(version: 20150226143241) do
 
   create_table "artists", force: :cascade do |t|
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "name"
     t.integer  "category_id"
+    t.integer  "question_id"
   end
 
   add_index "artists", ["category_id"], name: "index_artists_on_category_id"
+  add_index "artists", ["question_id"], name: "index_artists_on_question_id"
 
   create_table "categories", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "name"
+  end
+
+  create_table "facts", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "options", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "players", force: :cascade do |t|
@@ -50,5 +62,13 @@ ActiveRecord::Schema.define(version: 20150225225815) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "responses", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "player_id"
+  end
+
+  add_index "responses", ["player_id"], name: "index_responses_on_player_id"
 
 end

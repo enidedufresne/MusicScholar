@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :dashboard
   resources :categories do
     resources :artists   do
-      resources :questions
+      resources :questions do
+        resources :responses
+      end
     end
   end
 
