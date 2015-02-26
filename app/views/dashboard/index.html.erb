@@ -1,21 +1,18 @@
 <div class="youtube">
 
-<h1>Your Dashboard</h1>
+	<h1>Your Dashboard</h1>
 
-<div id="player"></div>
-<div id="options">
-	<ul>
-		<% @question[:options].each do |option| %>
-		  <li><%= option %></li>
-		<% end %>
-	</ul>
+	<div id="player"></div>
+	<div id="options">
+		<ul>
+			<% @question[:options].each do |option| %>
+			  <li><%= option %></li>
+			<% end %>
+		</ul>
+	</div>
 </div>
 
-<<<<<<< HEAD
-</iframe> 
-</div>
 <%= link_to 'Start Game' %>
-=======
 <%= javascript_tag do %>
 
 onYouTubeIframeAPIReady = function() {
@@ -43,4 +40,3 @@ onYouTubeIframeAPIReady = function() {
     );
 }
 <% end %>
->>>>>>> b1a3b8ff2e7f1165296eb2c48ef5eae951bd39c4
