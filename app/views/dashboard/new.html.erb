@@ -1,0 +1,31 @@
+<!-- require 'rss'
+require 'open-uri'
+ -->
+ <!-- THIS GOES TO TASK FILE -->
+<%
+url = 'http://gdata.youtube.com/feeds/base/users/RihannaVEVO/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile'
+items = []
+open(url) do |rss|
+	feed = RSS::Parser.parse(rss)
+	puts "Title: #{feed.channel.title}"
+	feed.items.each do |item|
+		items << item
+		# Question.create(text: "What video is this?", youtube_id: item.videoid)
+	end
+end
+%>
+
+<!-- THIS GOES INTO VIEW FILE -->
+
+<% items.each do |item| %>
+  <%= item.title %><br>
+  <%= item.pubDate %><br>
+  <% x = (item.guid).to_s %> 
+  <%= @newvideo_id = x.split(":").last.split("<").first %>
+<ul><li><a href= "www.youtube.com/watch?v=" + newvideo_id></a></li></ul>
+<!-- 
+@question = { youtube_id: 'kt0g4dWxEBo', options: ["1", "2", "3"]} -->
+
+<% end %>
+
+
