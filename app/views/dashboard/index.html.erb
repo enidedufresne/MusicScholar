@@ -1,18 +1,28 @@
+<section class="home">
+
 <div class="youtube">
 
+<div class="dash">
 	<h1>Your Dashboard</h1>
+</div>
 
 	<div id="player"></div>
 	<div id="options">
-		<ul>
+		
 			<% @question[:options].each do |option| %>
-			  <li><%= option %></li>
+			  <%= option %>
 			<% end %>
-		</ul>
 	</div>
 </div>
 
+<div class="start">
 <%= link_to 'Start Game', categories_path %>
+</div>
+</section>
+<section class="home-content">
+
+</section>
+
 <%= javascript_tag do %>
 
 onYouTubeIframeAPIReady = function() {

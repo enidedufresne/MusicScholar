@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150226191326) do
+ActiveRecord::Schema.define(version: 20150227181259) do
 
   create_table "artists", force: :cascade do |t|
     t.datetime "created_at",  null: false
@@ -38,6 +38,17 @@ ActiveRecord::Schema.define(version: 20150226191326) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "player_questions", force: :cascade do |t|
+    t.integer  "player_id"
+    t.integer  "question_id"
+    t.boolean  "correct"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "player_questions", ["player_id"], name: "index_player_questions_on_player_id"
+  add_index "player_questions", ["question_id"], name: "index_player_questions_on_question_id"
+
   create_table "players", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -60,6 +71,7 @@ ActiveRecord::Schema.define(version: 20150226191326) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "artist_id"
+    t.string   "text"
   end
 
   add_index "questions", ["artist_id"], name: "index_questions_on_artist_id"

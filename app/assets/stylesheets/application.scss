@@ -1,0 +1,138 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/*Displays a background image for the dashboard page*/
+.home {
+	background: url(image-path("dashboard.jpg"))repeat-y center bottom;
+ 	background-attachment: fixed;
+  background-size: cover;
+  height: 100% !important;
+}
+
+.genre2 {
+	background: url(image-path(""))repeat-y center bottom;
+ 	background-attachment: fixed;
+  background-size: cover;
+  height: 100% !important;
+}
+
+/*This made the bottom of the dashboard page black*/
+.home-content {
+	padding:150px;
+	background: #000000;
+}
+
+
+.music {
+	text-align: center;
+	color: black;
+}
+
+.rap {
+	text-align: center;
+}
+
+.rasta {
+	text-align: center;
+	font-size: 40px;
+}
+
+.slow-jamz {
+	text-align: center;
+	font-size: 50px;
+}
+
+.Hip-hop {
+	text-align: center;
+}
+
+.artists {
+	text-align: center;
+	font-size: 30px;
+}
+
+.jigga {
+	text-align: center;
+}
+
+.cube {
+	text-align: center;
+	font-size: 30px;
+}
+
+.musician {
+	text-align: center;
+	font-size: 40px;
+}
+
+.quiz {
+	text-align: center;
+}
+
+/*Displays all genre of music in the center*/
+.genre {
+	text-align: center;
+	font-size: 30px;
+}
+
+/*Displays youtube video in the center*/
+.youtube {
+	text-align: center;
+}
+
+/*Displays questions for artists in center of page.*/
+.question {
+	text-align: center;
+	font-size: 30px;
+}
+
+/*Displays all artist category in center*/
+.pick_an_artist {
+	text-align: center;
+}
+
+.start {
+	text-align: center;
+}
+
+/*go back to the dashboard page*/
+.back {
+	text-align: center;
+	padding-top: 70px;
+	font-size: 20px;
+}
+
+.home_page {
+	text-align: center;
+	color: white;
+}
+
+/*Displays background image for the home page(where you first log in)*/
+.front_page {
+	background: url(image-path("dashboard.jpg"))repeat-y center bottom;
+ 	background-attachment: fixed;
+  background-size: cover;
+  height: 100% !important;
+}
+
+/*Sign-in or Sign-out*/
+.player_nav {
+	text-align: center;
+}
+
+.new_player {
+	text-align: center;
+	padding-top: 20px;
+}
+
+/*Displays the h1 tag "your dashboard" white*/
+.dash {
+	color: white;
+}
+
+h2 {
+	text-align: center;
+}
+
+
