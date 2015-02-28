@@ -11,5 +11,7 @@
 
 class Question < ActiveRecord::Base
 	belongs_to :artist
-	belongs_to :category 
+	belongs_to :category
+	has_many :responses
+	has_many :options
 end

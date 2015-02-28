@@ -11,6 +11,12 @@ class ArtistsController < ApplicationController
 		@artist = Artist.find(params[:id])
 	end
 
+	 def create
+  	end
+
+  def participant
+  end
+
 	def edit
 	end
 
