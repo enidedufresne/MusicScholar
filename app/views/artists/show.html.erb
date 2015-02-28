@@ -4,5 +4,9 @@
 
 	
 	<%= @question.text %>
-
+	<ul>
+		<% @question.options.each do |option| %>
+			<li><%= option.text %></li>
+		<% end %>
+	</ul>
 </div>

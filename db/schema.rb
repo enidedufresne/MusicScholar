@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150228034105) do
+ActiveRecord::Schema.define(version: 20150228220757) do
 
   create_table "artists", force: :cascade do |t|
     t.datetime "created_at",  null: false
@@ -34,11 +34,14 @@ ActiveRecord::Schema.define(version: 20150228034105) do
   end
 
   create_table "options", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "text"
     t.boolean  "correct"
+    t.integer  "question_id"
   end
+
+  add_index "options", ["question_id"], name: "index_options_on_question_id"
 
   create_table "player_questions", force: :cascade do |t|
     t.integer  "player_id"
@@ -82,8 +85,10 @@ ActiveRecord::Schema.define(version: 20150228034105) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "player_id"
+    t.integer  "option_id"
   end
 
+  add_index "responses", ["option_id"], name: "index_responses_on_option_id"
   add_index "responses", ["player_id"], name: "index_responses_on_player_id"
 
   create_table "survey_answers", force: :cascade do |t|
