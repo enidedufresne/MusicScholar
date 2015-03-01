@@ -1,5 +1,7 @@
+
+<section class="genre2">
 <div class="music">
-<h1>Choose a Genre.</h1>
+<h1>Choose a Genre</h1>
 </div>
 
 
@@ -7,8 +9,13 @@
 
 <div class="genre">
  <% @categories.each do |category| %>
-	 <%= link_to category.name, category %>
+
+	 <li><%= link_to category.name, category %></li>
  	<% end %>
+ </section>
+</div>
+<div class="back">
+<%= link_to 'Back', dashboard_index_path %>
 </div>
 
 
