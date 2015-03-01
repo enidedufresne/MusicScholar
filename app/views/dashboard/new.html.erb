@@ -1,0 +1,14 @@
+<%# require "/lib/youtube.rake" %>
+<!-- THIS GOES INTO VIEW FILE -->
+
+<% items.each do |item| %>
+  <%= item.title %><br>
+  <%= item.pubDate %><br>
+<%# x = (item.guid).to_s %> 
+  <%# @newvideo_id = x.split(":").last.split("<").first %>
+<!-- <ul><li><a href= "www.youtube.com/watch?v=" + newvideo_id></a></li></ul>
+ -->
+<%# @question = { youtube_id: 'kt0g4dWxEBo', options: ["1", "2", "3"]}%>
+<% end %>
+
+
