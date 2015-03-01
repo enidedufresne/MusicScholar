@@ -13,7 +13,8 @@ namespace :youtube do
 				videoid = guid.to_s.split(":").last.split("<").first
 				Question.create(
 					text: "What video is this?", 
-					youtube_id: videoid,
+					youtube_id: videoid
+					# artist_id: 
 					)
 			end
 		end
