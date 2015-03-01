@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150227181259) do
+ActiveRecord::Schema.define(version: 20150301030259) do
 
   create_table "artists", force: :cascade do |t|
     t.datetime "created_at",  null: false
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20150227181259) do
     t.datetime "updated_at", null: false
     t.integer  "artist_id"
     t.string   "text"
+    t.string   "youtube_id"
   end
 
   add_index "questions", ["artist_id"], name: "index_questions_on_artist_id"
