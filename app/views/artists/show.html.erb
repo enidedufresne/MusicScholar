@@ -1,9 +1,11 @@
 
 <div class="question">
-
-<% @artist.questions.each do |question| %>
 	
-	<li><%= question.text %></li>
-
-<% end %>
+	<%= @question.text %>
+	
+		<% @question.options.each do |option| %>
+		<ul class="nav nav-pills nav-stacked">
+			<li><%= link_to option.text %></li>
+		</ul>
+	<% end %>
 </div>

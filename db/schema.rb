@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150301030259) do
+=======
+ActiveRecord::Schema.define(version: 20150228220757) do
+>>>>>>> Musica2
 
   create_table "artists", force: :cascade do |t|
     t.datetime "created_at",  null: false

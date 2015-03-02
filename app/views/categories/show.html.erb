@@ -1,3 +1,4 @@
+
 <div class="pick_an_artist">
 <h1>Pick an artist</h1>
 </div>
@@ -5,7 +6,9 @@
 
 <div class="artists">
 <% @category.artists.each do |artist| %>
+<ul class="nav nav-pills nav-stacked">
 
 	<li><%= link_to artist.name, category_artist_path(artist.category, artist) %></li>
+</ul>
 <% end %>
 </div>

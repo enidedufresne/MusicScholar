@@ -10,12 +10,14 @@
   height: 100% !important;
 }
 
+/*Displays a background image for pick an artist page*/
 .genre2 {
-	background: url(image-path(""))repeat-y center bottom;
- 	background-attachment: fixed;
-  background-size: cover;
-  height: 100% !important;
+	background: url(image-path("beach-black-and-white-desert.jpeg"))repeat-y center bottom;
+	height: 580px;
+    width: 100% 100%;
+    background-size: 100% 100%; 	
 }
+
 
 /*This made the bottom of the dashboard page black*/
 .home-content {

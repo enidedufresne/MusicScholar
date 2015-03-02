@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :categories do
     resources :artists   do
       resources :questions do
-        resources :responses
+        resources :responses do
+        resources :options
+      end
       end
     end
   end

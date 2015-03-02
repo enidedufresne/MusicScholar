@@ -9,7 +9,14 @@ class ArtistsController < ApplicationController
 
 	def show
 		@artist = Artist.find(params[:id])
+		@question = @artist.questions.first
 	end
+
+	 def create
+  	end
+
+  def participant
+  end
 
 	def edit
 	end
