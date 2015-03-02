@@ -10,6 +10,7 @@
 #
 
 class Question < ActiveRecord::Base
+	has_many :options
 	belongs_to :artist
 	belongs_to :category 
 end

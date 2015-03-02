@@ -1,14 +1,54 @@
-<%# require "/lib/youtube.rake" %>
-<!-- THIS GOES INTO VIEW FILE -->
+<section class="home">
 
-<% items.each do |item| %>
-  <%= item.title %><br>
-  <%= item.pubDate %><br>
-<%# x = (item.guid).to_s %> 
-  <%# @newvideo_id = x.split(":").last.split("<").first %>
-<!-- <ul><li><a href= "www.youtube.com/watch?v=" + newvideo_id></a></li></ul>
- -->
-<%# @question = { youtube_id: 'kt0g4dWxEBo', options: ["1", "2", "3"]}%>
+<div class="youtube">
+
+<div class="dash">
+	<h1>Your Dashboard</h1>
+</div>
+
+	<div id="player"></div>
+	<div id="options">
+		
+
+	</div>
+</div>
+
+
+<div class="start">
+
+<!-- THIS PLAYS THE ACTUAL VIDEO!!!! -->
+
+<%= link_to 'Start Game', categories_path %>
+</div>
+</section>
+<section class="home-content">
+
+</section>
+
+<%= javascript_tag do %>
+
+onYouTubeIframeAPIReady = function() {
+	console.log("iframe is ready");
+	player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: '<%= @question.youtube_id %>', 
+          playerVars: { // 'playlist':['kt0g4dWxEBo', 'k4YRWT_Aldo'], 
+                        'autoplay': 1, 
+                        'start': 20, 
+                        'end': 30, 
+                        'theme': 'light', 
+                        'autohide': 1, 
+                        'fs': 0, 
+                        'iv_load_policy': 3, 
+                        'modestbranding': 1, 
+                        'rel': 0, 
+                        'showinfo': 0},
+          //events: {
+          //  'onReady': onPlayerReady,
+          //  'onStateChange': onPlayerStateChange
+          //}
+        }
+    );
+}
 <% end %>
-
-

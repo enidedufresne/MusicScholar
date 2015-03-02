@@ -9,9 +9,7 @@
 	<div id="player"></div>
 	<div id="options">
 		
-			<% @question[:options].each do |option| %>
-			  <%= option %>
-			<% end %>
+
 	</div>
 </div>
 
@@ -34,7 +32,7 @@ onYouTubeIframeAPIReady = function() {
 	player = new YT.Player('player', {
           height: '390',
           width: '640',
-          videoId: '<%= @question[:youtube_id] %>', 
+          videoId: '<%= @question.youtube_id %>', 
           playerVars: { // 'playlist':['kt0g4dWxEBo', 'k4YRWT_Aldo'], 
                         'autoplay': 1, 
                         'start': 20, 
