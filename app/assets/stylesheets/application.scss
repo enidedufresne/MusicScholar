@@ -105,17 +105,14 @@
 	font-size: 20px;
 }
 
-.home_page {
-	text-align: center;
-	color: white;
-}
 
 /*Displays background image for the home page(where you first log in)*/
 .front_page {
-	background: url(image-path("dashboard.jpg"))repeat-y center bottom;
- 	background-attachment: fixed;
-  background-size: cover;
-  height: 100% !important;
+	background: url(image-path("7268413628_9758d74863_z.jpg"))repeat-y center bottom;
+ 	height: 580px;
+    width: 100% 100%;
+    background-size: 100% 100%;
+    text-align: center;
 }
 
 /*Sign-in or Sign-out*/
