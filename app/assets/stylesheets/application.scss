@@ -10,6 +10,10 @@
   height: 100% !important;
 }
 
+.home_page {
+	font-size: 16px;
+}
+
 /*Displays a background image for pick an artist page*/
 .genre2 {
 	background: url(image-path("beach-black-and-white-desert.jpeg"))repeat-y center bottom;
@@ -117,6 +121,7 @@
     text-align: center;
 }
 
+/*Put the sign in page in the home page & centered it */
 .front_page h2 {
 	margin-top: 140px;
 }
