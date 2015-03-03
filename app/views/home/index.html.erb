@@ -5,9 +5,9 @@
 <h1>Welcome to Music Scholar!</h1>
 <p>The place where the average person comes and leaves knowing more about artists.</p>
 
-
+<div class="log_in">
 <h2>Log in</h2>
-
+</div>
 <%= form_for(Player.new, url: session_path("player")) do |f| %>
   <div class="field">
     <%= f.label :email %><br />

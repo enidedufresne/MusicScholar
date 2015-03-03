@@ -1,4 +1,7 @@
 
+<section class="styling_artist_page">
+
+
 <div class="pick_an_artist">
 <h1>Pick an artist</h1>
 </div>
@@ -11,4 +14,9 @@
 	<li><%= link_to artist.name, category_artist_path(artist.category, artist) %></li>
 </ul>
 <% end %>
+<div class="choose_another_genre">
+<%= button_to 'Pick another genre', categories_path, :id => "open-contacts-dialog-btn",
+:class => "inbox-sf-add-btn tip", :method => :get %>
 </div>
+</div>
+</section>
