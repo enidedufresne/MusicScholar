@@ -4,7 +4,7 @@
 
 <div class="dash">
 	<h1>Your Dashboard</h1>
-</div>
+</div><!-- dash -->
 
 	<div id="player"></div>
 	<div id="options">
@@ -12,18 +12,18 @@
 			<% @question[:options].each do |option| %>
 			  <%= option %>
 			<% end %>
-	</div>
-</div>
+	</div><!-- player -->
+</div><!-- options -->
 
 <div class="start">
 <%= button_to 'Start Game', categories_path, :id => "open-contacts-dialog-btn",
 :class => "inbox-sf-add-btn tip", :method => :get %>
 
-</div>
-</section>
+</div><!-- start -->
+</section><!-- home -->
 <section class="home-content">
 
-</section>
+</section><!-- home-content -->
 
 <%= javascript_tag do %>
 
