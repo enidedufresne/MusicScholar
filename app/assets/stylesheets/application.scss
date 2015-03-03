@@ -16,14 +16,22 @@
 	color: #000000
 }
 
+/*Displays options to choose from in a different color*/
 a {
 	color: #404040;
+	text-decoration: underline;
 }
 
+/*Changes the color to light gray when hovering over options to choose from*/
+a:hover {
+	opacity: .4;
+}
+
+/*Displays "Sorry try again!" in the top center of screen, and makes it bigger.*/ 
 #flash_notice {
 	text-align: center;
 	padding-top: 19px;
-	font-size: 18px;
+	font-size: 20px;
 }
 
 /*Displays a background image for pick an artist page*/
