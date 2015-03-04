@@ -54,7 +54,7 @@ namespace :pf do
 					# puts title
 					# artist_params = {
 					# 	name: title,
-					# 	rssurl: url
+					# 	rss_url: url
 					# }
 					
 					# Artist.create(artist_params)
