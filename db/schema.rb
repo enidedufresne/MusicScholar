@@ -11,12 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150301030259) do
+ActiveRecord::Schema.define(version: 20150304133211) do
 
   create_table "artists", force: :cascade do |t|
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "category_id"
+    t.string   "rss_url"
   end
 
   add_index "artists", ["category_id"], name: "index_artists_on_category_id"
