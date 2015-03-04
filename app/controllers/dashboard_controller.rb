@@ -2,7 +2,7 @@ class DashboardController < ApplicationController
 	before_filter :authenticate_player!
 
 	def index
-		@question = Question.last
+		# @question = Question.last
 	end
 
 	def new
