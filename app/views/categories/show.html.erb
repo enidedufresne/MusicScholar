@@ -1,7 +1,11 @@
 
+<section class="styling_artist_page">
+
+
 <div class="pick_an_artist">
 <h1>Pick an artist</h1>
-</div>
+</div><!--  pick_an artist -->
+
 <!-- Displays all artists name from each genre of music. -->
 
 <div class="artists">
@@ -9,6 +13,12 @@
 <ul class="nav nav-pills nav-stacked">
 
 	<li><%= link_to artist.name, category_artist_path(artist.category, artist) %></li>
-</ul>
+</ul> <!-- nav nav-pills nav-stacked -->
 <% end %>
-</div>
+
+<div class="choose_another_genre">
+<%= button_to 'Pick another genre', categories_path, :id => "open-contacts-dialog-btn",
+:class => "inbox-sf-add-btn tip", :method => :get %>
+</div> <!-- artists -->
+</div> <!-- choose_another_genre -->
+</section> <!-- styling_artist_page -->
