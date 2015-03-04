@@ -10,6 +10,31 @@
   height: 100% !important;
 }
 
+/*Makes all font in home page bigger and all the tags are shadowed*/
+.home_page {
+	font-size: 16px;
+	text-shadow: -1px -1px 1px;
+	color: #000000
+}
+
+/*Displays options to choose from in a different color*/
+a {
+	color: #404040;
+	text-decoration: underline;
+}
+
+/*Changes the color to light gray when hovering over options to choose from*/
+a:hover {
+	opacity: .4;
+}
+
+/*Displays "Sorry try again!" in the top center of screen, and makes it bigger.*/ 
+#flash_notice {
+	text-align: center;
+	padding-top: 19px;
+	font-size: 20px;
+}
+
 /*Displays a background image for pick an artist page*/
 .genre2 {
 	background: url(image-path("beach-black-and-white-desert.jpeg"))repeat-y center bottom;
@@ -23,6 +48,20 @@
 .home-content {
 	padding:150px;
 	background: #000000;
+}
+
+/*Moved the choose_another_genre button down & changed the size*/
+.choose_another_genre {
+	font-size: 16px;
+	padding-top: 24px;
+}
+
+/*Displays background image for pick an artist page*/
+.styling_artist_page {
+	background: url(image-path("raybans.jpg"))repeat-y center bottom;
+	height: 580px;
+    width: 100%;
+    background-size: 100%;
 }
 
 
@@ -49,6 +88,7 @@
 	text-align: center;
 }
 
+/*Displays all artists in the center of the page*/
 .artists {
 	text-align: center;
 	font-size: 30px;
@@ -68,6 +108,7 @@
 	font-size: 40px;
 }
 
+/*Puts all questions in the center of page*/
 .quiz {
 	text-align: center;
 }
@@ -98,24 +139,26 @@
 	text-align: center;
 }
 
-/*go back to the dashboard page*/
+/*Go back to the dashboard page*/
 .back {
 	text-align: center;
 	padding-top: 70px;
 	font-size: 20px;
 }
 
-.home_page {
-	text-align: center;
-	color: white;
-}
 
 /*Displays background image for the home page(where you first log in)*/
 .front_page {
-	background: url(image-path("dashboard.jpg"))repeat-y center bottom;
- 	background-attachment: fixed;
-  background-size: cover;
-  height: 100% !important;
+	background: url(image-path("7268413628_9758d74863_z.jpg"))repeat-y center bottom;
+ 	height: 580px;
+    width: 100% 100%;
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+/*Put the sign in page in the home page & centered it */
+.front_page h2 {
+	margin-top: 140px;
 }
 
 /*Sign-in or Sign-out*/
@@ -133,8 +176,12 @@
 	color: white;
 }
 
+/*All h2 tags are centered*/
 h2 {
 	text-align: center;
 }
 
+.log_in {
+	padding-top: 23px;
+}
 

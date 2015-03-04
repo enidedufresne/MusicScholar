@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150304133211) do
+=======
+
+ActiveRecord::Schema.define(version: 20150228220757) do
+
+
+>>>>>>> e38ee123d4eb8c13787800ddef7f2d453027c7b6
 
   create_table "artists", force: :cascade do |t|
     t.datetime "created_at",  null: false
