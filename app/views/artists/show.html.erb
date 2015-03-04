@@ -1,7 +1,35 @@
 
 <div class="question">
+
+
 	
 	<%= @question.text %>
+
+	<div id="player"></div>
+
+  <%= javascript_include_tag 'https://www.youtube.com/iframe_api' %>
+	<%= javascript_tag do %>
+
+onYouTubeIframeAPIReady = function() {
+	console.log("iframe is ready");
+	player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: '<%= @question.youtube_id %>', 
+          playerVars: { 'autoplay': 1, 
+                        'start': 20, 
+                        'end': 50, 
+                        'theme': 'light', 
+                        'autohide': 1, 
+                        'fs': 0, 
+                        'iv_load_policy': 3, 
+                        'modestbranding': 1, 
+                        'rel': 0, 
+                        'showinfo': 0},
+        }
+    );
+}
+<% end %>
 	
 		<% @question.options.each do |option| %>
 		

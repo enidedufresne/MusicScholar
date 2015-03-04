@@ -1,9 +1,7 @@
 require 'open-uri'
 require 'RSS'
 
-namespace :pf do
-	task runfeed: :environment do
-		feeds = [
+		hiphop_feeds = [
 			'http://gdata.youtube.com/feeds/base/users/kellyrowlandVEVO/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile',
 			'http://gdata.youtube.com/feeds/base/users/RihannaVEVO/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile', 
 			'http://gdata.youtube.com/feeds/base/users/50CentVEVO/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile',
@@ -38,80 +36,57 @@ namespace :pf do
 			'http://gdata.youtube.com/feeds/base/users/beyonceVEVO/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile'
 		]
 
-		def ingest_feed(url)
+		def ingest_feed(url, category)
 			open(url) do |rss|
 				feed = RSS::Parser.parse(rss)
 				#title = feed.channel.title.gsub(/\AUploads\sby\s/, '').gsub('VEVO', '')
 				feed.items.each do |item| 
-					title = item.title.split('-').first.strip
+					nametitle = item.title.split('-')
+					name = nametitle.first.strip
+					title = nametitle.last.strip
 					guid = item.guid
 					videoid = guid.to_s.split(":").last.split("<").first
+					# require 'pp'
+					# pp item
 
-					# question_params = {
-					# 	text: "What video is this?" 	
-					# }
+					puts name, title
+					artist_params = {
+						name: name,
+						rss_url: url,
+						category: category
+					}
+					artist = Artist.find_or_create_by(artist_params)
 
-					# puts title
-					# artist_params = {
-					# 	name: title,
-					# 	rss_url: url
-					# }
-					
-					# Artist.create(artist_params)
-					# video_params = {
-					# 	youtube_id: videoid, #changed videoid: from youtube_id:, system said it was an UnknownAttributeError
-					# 	artist_id: Artist.find_by_name(title).id
-					# }
+					question_params = {
+						text: "What video is this?",
+						youtube_id: videoid, #changed videoid: from youtube_id:, system said it was an UnknownAttributeError
+						artist: artist	
+					}
+					question = Question.create(question_params)
 
-					# video = Video.new(video_params)
-					# video.save!
-					# video.questions.create(question_params)
-					# # question.options
-
-					
-
-					Question.create(
-					text: "What video is this?", 
-					youtube_id: videoid
-					# artist_id: 
-					)
-
-					# video = Video.create(video_params)
-					# current_question = Question.create(question_params)
-
-					# video.questions.push(current_question)
-					# question.options
+					option_params = {
+						text: title,
+						correct: true,
+						question: question
+					}
+					options = Option.create(option_params)
 				end
 			end
 		end
 
-		feeds.each do |feed_url|
-			ingest_feed(feed_url)
+
+namespace :pf do
+	task runfeed: :environment do
+		hiphop_feeds.each do |feed_url|
+			ingest_feed(feed_url, Category.find_or_create_by(name: "Hip Hop"))
 		end
+
+		# randb_feeds.each do |feed_url|
+		# 	ingest_feed(feed_url, Category.find_or_create_by(name: "R&B"))
+		# end
 	end	
 end
 
 
 
 
-# require 'open-uri'
-# require 'RSS'
-# namespace :youtube do
-# 	desc "Create questions from a YouTube feed."
-# 	task pullfeed: :environment do
-# 		youtube_url = 'http://gdata.youtube.com/feeds/base/users/RihannaVEVO/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile'
-# 		open(youtube_url) do |rss|
-# 			feed = RSS::Parser.parse(rss)
-# 			#puts "Title: #{feed.channel.title}"
-# 			feed.items.each do |item|
-# 				guid = item.guid
-# 				videoid = guid.to_s.split(":").last.split("<").first
-# 				Question.create(
-# 					text: "What video is this?", 
-# 					youtube_id: videoid
-# 					# artist_id: 
-# 					)
-# 			end
-# 		end
-# 	end
-# end
