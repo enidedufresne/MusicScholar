@@ -9,7 +9,7 @@ class ArtistsController < ApplicationController
 
 	def show
 		@artist = Artist.find(params[:id])
-		@question = @artist.questions.where.not(id: params[:last_question]).order('random() asc').take
+		@question = @artist.questions.where.not(id: params[:last_question]).order('id asc').take
 	end
 
 	def create
@@ -22,12 +22,17 @@ class ArtistsController < ApplicationController
 	def create_response
 		@response = Response.create(player_id: current_player.id, option_id: params[:option])
 		@question = @response.option.question
-		if @response.option.correct
-			redirect_to category_artist_path(last_question: @question.id,
+		@total_questions = @question.artist.questions.count
+		@answered = params[:correct].to_i
+		if (@response.option.correct) && (@answered < @total_questions) 
+			@answered += 1
+			redirect_to category_artist_path(last_question: @question.id, correct: @answered,
 			category_id: @question.artist.category.id, id: @question.artist.id)
+		elsif @response.option.correct
+			redirect_to category_path(@question.artist.category)
 		else
 			artist = @response.option.question.artist
-			redirect_to category_path(artist.category), :notice => "Sorry try again!"
+			redirect_to category_path(artist.category), notice: "Sorry try again!"
 		end
 	end
 
