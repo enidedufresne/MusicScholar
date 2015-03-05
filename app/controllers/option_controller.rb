@@ -1,4 +1,6 @@
 class OptionController < ApplicationController
+	before_filter :authenticate_player!
+	
 	def new
 		@option = Option.new
 	end

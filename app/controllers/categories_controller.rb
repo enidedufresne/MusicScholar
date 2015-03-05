@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+	before_filter :authenticate_player!
+	
 	def new
 		@category = Category.new
 	end
