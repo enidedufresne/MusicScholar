@@ -7,8 +7,10 @@
 
 	<div id="player"></div>
 
+
   <%= javascript_include_tag 'https://www.youtube.com/iframe_api' %>
-	<%= javascript_tag do %>
+  <% if @question.youtube_id %>
+	<%= javascript_tag do %> 
 
 onYouTubeIframeAPIReady = function() {
 	console.log("iframe is ready");
@@ -29,6 +31,7 @@ onYouTubeIframeAPIReady = function() {
         }
     );
 }
+<% end %>
 <% end %>
 	
 		<% @question.options.each do |option| %>

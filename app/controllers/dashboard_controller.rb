@@ -3,6 +3,7 @@ class DashboardController < ApplicationController
 
 	def index
 		# @question = Question.last
+		@question = Question.take
 	end
 
 	def new
