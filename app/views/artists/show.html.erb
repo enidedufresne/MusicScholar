@@ -34,7 +34,7 @@ onYouTubeIframeAPIReady = function() {
 <% end %>
 <% end %>
 	
-		<% @question.options.each do |option| %>
+		<% @question.options.shuffle.each do |option| %>
 		
 		<ul class="nav nav-pills nav-stacked">
 			<li><%= link_to option.text, responses_path(option: option.id, correct: params[:correct]), method: :post  %></li>
