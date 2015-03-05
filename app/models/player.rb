@@ -25,4 +25,9 @@ class Player < ActiveRecord::Base
   # :lockable, :timeoutable, :confirmable, and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+
+         def points
+         	responses.where(correct: true).count
+         end
 end
