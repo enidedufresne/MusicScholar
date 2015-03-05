@@ -7,8 +7,10 @@
 
 	<div id="player"></div>
 
+
   <%= javascript_include_tag 'https://www.youtube.com/iframe_api' %>
-	<%= javascript_tag do %>
+  <% if @question.youtube_id %>
+	<%= javascript_tag do %> 
 
 onYouTubeIframeAPIReady = function() {
 	console.log("iframe is ready");
@@ -30,11 +32,12 @@ onYouTubeIframeAPIReady = function() {
     );
 }
 <% end %>
+<% end %>
 	
 		<% @question.options.shuffle.each do |option| %>
 		
 		<ul class="nav nav-pills nav-stacked">
-			<li><%= link_to option.text, responses_path(option: option.id), method: :post  %></li>
+			<li><%= link_to option.text, responses_path(option: option.id, correct: params[:correct]), method: :post  %></li>
 		</ul> <!-- nav nav-pills nav-stacked -->
 	<% end %>
 </div> <!-- question -->

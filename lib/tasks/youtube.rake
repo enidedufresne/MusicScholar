@@ -112,11 +112,9 @@ require 'RSS'
 							text: option.text,
 							correct: false,
 							question: question
-							)
+						)
 
 					end
-					# puts otpions.all
-
 				end
 			end
 		end
