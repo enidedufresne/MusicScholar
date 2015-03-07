@@ -7,12 +7,13 @@
 #  updated_at :datetime         not null
 #  artist_id  :integer
 #  text       :string
+#  youtube_id :string
 #
 
 class Question < ActiveRecord::Base
 	has_many :options
 	belongs_to :artist
 	belongs_to :category
-	has_many :responses
+	has_many :responses, through: :options
 	has_many :options
 end

@@ -10,6 +10,10 @@
   height: 100% !important;
 }
 
+.video_question {
+	text-align: center;
+}
+
 /*Makes all font in home page bigger and all the tags are shadowed*/
 .home_page {
 	font-size: 16px;
@@ -59,7 +63,7 @@ a:hover {
 /*Displays background image for pick an artist page*/
 .styling_artist_page {
 	background: url(image-path("raybans.jpg"))repeat-y center bottom;
-	height: 580px;
+	height: 900px;
     width: 100%;
     background-size: 100%;
 }

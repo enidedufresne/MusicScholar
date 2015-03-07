@@ -20,10 +20,18 @@
 class Player < ActiveRecord::Base
 	has_many :responses
 	has_many :player_questions
+<<<<<<< HEAD
 	has_many :questions, through: :player_questions
 	# has_many :points
+=======
+>>>>>>> 0b8de58a394b22f1c11154fda464b569970f39d3
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable, :confirmable, and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+
+         def points
+         	responses.where(correct: true).count
+         end
 end

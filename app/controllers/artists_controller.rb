@@ -11,7 +11,15 @@ class ArtistsController < ApplicationController
 
 	def show
 		@artist = Artist.find(params[:id])
-		@question = @artist.questions.where.not(id: params[:last_question]).order('id asc').take
+		if current_player
+		answered_questions = current_player.responses.map do |r|
+			puts r.id
+			puts r.option.inspect
+			r.option.question_id
+		end
+		end
+		@question = @artist.questions.where.not(id: answered_questions).order('id asc').take
+		redirect_to category_path(@artist.category) if @question.nil?
 	end
 
 	def create

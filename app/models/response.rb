@@ -6,6 +6,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  player_id  :integer
+#  option_id  :integer
 #
 
 class Response < ActiveRecord::Base
