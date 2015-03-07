@@ -20,6 +20,7 @@ class ArtistsController < ApplicationController
 		end
 		@question = @artist.questions.where.not(id: answered_questions).order('id asc').take
 		redirect_to category_path(@artist.category) if @question.nil?
+		flash[:notice] = "You already picked this artist. Please choose another." 
 	end
 
 	def create
