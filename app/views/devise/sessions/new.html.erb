@@ -1,14 +1,6 @@
-
-<section class="front_page">
-	
-<div class="home_page">
-  <h1>Welcome to Music Scholar!</h1>
-  <p>The place where the average person comes and leaves knowing more about artists.</p>
-
-<!-- <div class="log_in">
 <h2>Log in</h2>
-</div>
-<%= form_for(Player.new, url: session_path("player")) do |f| %>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
@@ -19,17 +11,16 @@
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
+  <% if devise_mapping.rememberable? -%>
     <div class="field">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
+  <% end -%>
 
   <div class="actions">
     <%= f.submit "Log in" %>
   </div>
 <% end %>
 
-
-
-</div>
-</section>
+<%= render "devise/shared/links" %>

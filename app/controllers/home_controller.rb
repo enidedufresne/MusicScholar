@@ -4,4 +4,7 @@ class HomeController < ApplicationController
 			redirect_to :controller=> 'dashboard', :action => 'index'	
 		end
 	end
+
+	def login
+	end
 end

@@ -42,6 +42,6 @@ class ArtistsController < ApplicationController
 	end
 
 	def ask_question
-		@artist = @question.artist.category
+		# @artist = @question.artist.category
 	end
 end
