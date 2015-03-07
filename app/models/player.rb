@@ -20,7 +20,6 @@
 class Player < ActiveRecord::Base
 	has_many :responses
 	has_many :player_questions
-	has_many :points
   # Include default devise modules. Others available are:
   # :lockable, :timeoutable, :confirmable, and :omniauthable
   devise :database_authenticatable, :registerable,
