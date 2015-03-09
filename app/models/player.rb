@@ -30,6 +30,21 @@ class Player < ActiveRecord::Base
 
 
          def points
-         	responses.where(correct: true).count
+          # refactor into single query without map
+
+          # go to responses datatable, return me responses where 
+          ## the player is the same player this method is being used on
+          # => [<response><response>]
+          Response.where(player: self).map{ |response|
+            if response.option.correct
+              response
+            else
+              nil
+            end
+          }.compact.count
+          # => [nil, <response>, <response>, nil, <response>].compact
+          # => [<response>, <response>, <response>].count
+          # => 3
          end
 end
+

@@ -10,10 +10,28 @@
   height: 100% !important;
 }
 
+.leader_board {
+	padding-top: 18px;
+	font-size: 20px;
+}
+
+.points_leaderboard {
+	float: right;
+	font-size: 33px;
+	margin-right: 42px;
+}
+
+.player_leaderboard {
+	text-align: center;
+	font-size: 33px;
+	margin-right: 26px;
+}
+
 /*Creates a chart for players(leader_board)*/
 table, th, td {
     border: 1px solid white;
     border-collapse: collapse;
+    
 }
 
 th,td {
@@ -163,10 +181,11 @@ a:hover {
 
 .start {
 	text-align: center;
+	padding-top: 30px;
 }
 
 /*Go back to the dashboard page*/
-.back {
+.my_progress {
 	text-align: center;
 	padding-top: 70px;
 	font-size: 20px;

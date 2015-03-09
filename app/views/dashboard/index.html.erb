@@ -34,17 +34,15 @@
 
 
 
-<div class="start">
+
  
 
 
 
 <!-- THIS PLAYS THE ACTUAL VIDEO!!!! -->
 
-<%= button_to 'Start Game', categories_path, :id => "open-contacts-dialog-btn",
-:class => "inbox-sf-add-btn tip", :method => :get %>
 
-</div>
+
 </section>
 
 <!-- Displays a leaderboard for Players -->
@@ -53,17 +51,24 @@
   <h1>LeaderBoard</h1>
 </div>
   <table border="1" style="width:100%">
+<div class="player_leaderboard">
+<p>Player(s)</p>
+</div>
+<div class="points_leaderboard">
+<p>Points</p>
+</div>
+<% @players.each do |player| %> 
   <tr>
-    <td>Enide</td>
-    <td>Dufresne</td> 
-    <td>50</td>
+    <td><%= player.email %></td> 
+    <td><%= player.points %></td>
   </tr>
-  <tr>
-    <td>Alex</td>
-    <td>Moraleza</td> 
-    <td>94</td>
-  </tr>
+<% end %>
 </table>
+<div class="start">
+
+<%= button_to 'Start Game', categories_path, :id => "open-contacts-dialog-btn",
+:class => "inbox-sf-add-btn tip", :method => :get %>
+</div>
 
 </section>
 

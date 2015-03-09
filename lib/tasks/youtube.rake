@@ -107,13 +107,21 @@ require 'RSS'
 					}
 					Option.create(option_params)
 
-					Option.all.shuffle.take(3).each do |option|
-						Option.create(
-							text: option.text,
-							correct: false,
-							question: question
-						)
+					options_chosen = []
 
+					Option.where(artist: artist).shuffle.each do |option|
+						if options_chosen.count < 3
+							unless options_chosen.include?(option)
+								options_chosen.push(
+								Option.create(
+									text: option.text,
+									correct: false,
+									question: question
+								)	)
+							end
+						else
+							break
+						end
 					end
 				end
 			end

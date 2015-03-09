@@ -4,6 +4,7 @@ class DashboardController < ApplicationController
 	def index
 		# @question = Question.last
 		@question = Question.take
+		@players = Player.all
 	end
 
 	def new

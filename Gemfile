@@ -1,18 +1,8 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
-# Use sqlite3 as the database for Active Record
-group :development do
-	gem 'sqlite3'
-end
-
-group :development do
-	gem 'pg'
-	gem 'annotate'
-end
-
+gem 'pg'
 gem 'devise'
 gem 'awesome_print', '~> 1.6.1'
 # Use SCSS for stylesheets
@@ -61,5 +51,9 @@ group :development, :test do
   #Displays better errors so we can understand wtf is going on. ;)
   gem 'binding_of_caller'
   gem 'better_errors'
+end
+
+group :development do 
+  gem 'annotate'
 end
 
