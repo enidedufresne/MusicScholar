@@ -10,6 +10,22 @@
   height: 100% !important;
 }
 
+/*Creates a chart for players(leader_board)*/
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+th,td {
+    padding: 15px;
+}
+
+/*Centers leader board in the center of page*/
+.leader_board {
+	text-align: center;
+	padding-bottom: 36px;
+}
+
 .video_question {
 	text-align: center;
 }
