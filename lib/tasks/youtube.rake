@@ -1,5 +1,5 @@
 require 'open-uri'
-require 'RSS'
+require 'rss'
 
 		hiphop_feeds = [
 			'http://gdata.youtube.com/feeds/base/users/50CentVEVO/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile',
