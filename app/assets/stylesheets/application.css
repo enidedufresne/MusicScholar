@@ -1,0 +1,422 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: #fff;
+  webkit-font-smoothing: antialiased; /* makes text skinny*/
+}
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.button,
+/*.button:hover,*/
+.button:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/*/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+body {
+  color: #fff;
+ /* text-align: center;*/
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+
+
+input[type='text'] { 
+	font-size: 24px; 
+	font-family: monospace;
+	color: #333;
+}
+/*li .artistbutton {
+  border-radius: .9;
+  border: 5px solid red;
+  margin-right: 100px;
+  width: 50px;
+  height: 30px;
+  display: inline;
+  list-style-type: none;
+  padding: .2em 1em;
+ /* color: #036;*/
+/*}
+li .artistbutton a {
+  text-decoration: none;
+}*/
+
+/*/*
+ * VIDEO - Artists Show Page
+ -------------------------------------------------- */
+
+.player_nav {
+text-align: right;
+color: #eee;
+}
+
+.player_nav:hover {
+color: #fff;
+}
+
+.question {
+  text-align: center;
+}
+#player {
+  border:4px solid #000;
+  border-radius: 10px !important;
+}
+.option_thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #646464;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+  -o-transition: border .2s ease-in-out;
+  transition: border .2s ease-in-out;
+}
+.option_thumbnail:hover {
+  background-color: #A4A4A4;
+}
+/*/*
+ * THUMBNAILS - Categories
+ -------------------------------------------------- */
+.genre>div:nth-of-type(1)>div {
+  background-image: url(
+    "https://stocksnap.io/img-thumbs/280h/ESHERXYHC0.jpg")
+}
+.genre>div:nth-of-type(2)>div {
+  background-image: url(
+    "https://stocksnap.io/img-thumbs/280h/57BE1EA682.jpg")
+}
+.genre>div:nth-of-type(3)>div {
+  background-image: url(
+    "https://stocksnap.io/img-thumbs/280h/RJWNF1GVHZ.jpg")
+}
+.genre>div:nth-of-type(4)>div {
+  background-image: url(
+    "https://stocksnap.io/img-thumbs/280h/L695JG265J.jpg")
+}
+.genre>div:nth-of-type(5)>div {
+  background-image: url(
+    "https://stocksnap.io/img-thumbs/280h/O48AVVP4L8.jpg")
+}
+.genre>div>div {
+  background-size: 100% 300%;
+  background-position: 0px -30px;
+}
+.mythumbnail {
+  display: block;
+  padding: 25px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #222;
+  border-radius: 4px;
+  opacity: .7;
+  transition: border .2s ease-in-out;
+}
+.mythumbnail:hover{
+  opacity: 1;
+  color: white;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  /*font-size: 150%;*/
+ /* opacity: .4;*/
+  /*background: transparent;*/
+
+}
+
+/*/*
+ * THUMBNAILS - Artists
+ -------------------------------------------------- */
+.artists>div:nth-of-type(1)>div {
+  background-image: url(
+    "https://ununsplash.imgix.net/6/blurred_lines.jpeg?q=75&fm=jpg&s=6b8c9b838ae76644b8bbac33acb139fd")
+}
+.artists>div:nth-of-type(2)>div {
+  background-image: url(
+    "https://ununsplash.imgix.net/photo-1424296308064-1eead03d1ad9?q=75&fm=jpg&s=e996ff6481bc4bc7064929d5b16b232a")
+}
+.artists>div:nth-of-type(3)>div {
+  background-image: url(
+    "https://ununsplash.imgix.net/photo-1423768164017-3f27c066407f?q=75&fm=jpg&s=e5afacf2533a2e9e5868837b79414cc6")
+}
+.artists>div:nth-of-type(4)>div {
+  background-image: url(
+    "https://ununsplash.imgix.net/photo-1421050348089-e4356d6c8e18?q=75&fm=jpg&s=b96ee7690858f5a230c3e394cf90e5ac")
+}
+.artists>div:nth-of-type(5)>div {
+  background-image: url(
+    "https://unsplash.imgix.net/photo-1423778757303-7bd63f823475?q=75&fm=jpg&s=05c429024e48c6289b781f29fb5e9233")
+}
+.artists>div:nth-of-type(6)>div {
+  background-image: url(
+    "https://unsplash.imgix.net/39/0Lnrvj8NQHepTFYthRyL_IMG_9925.JPG?q=75&fm=jpg&s=37246547bf4529fc98411f4747aa052d")
+}
+.artists>div:nth-of-type(7)>div {
+  background-image: url(
+    "https://ununsplash.imgix.net/35/BIR62RGGjGxN5nrbnzwu_3.jpg?q=75&fm=jpg&s=8a51d1e4b7685ecb5c2bd4a1fd629d11")
+}
+.artists>div:nth-of-type(8)>div {
+  background-image: url(
+    "https://ununsplash.imgix.net/29/night-square.jpg?q=75&fm=jpg&s=9cfc48d0d880c2b44c9f8c0d65605a6a")
+}
+.artists>div:nth-of-type(9)>div {
+  background-image: url(
+    "https://unsplash.imgix.net/15/strum.JPG?q=75&fm=jpg&s=ae58858a4521902da82737e1125b9def")
+}
+.artists>div:nth-of-type(10)>div {
+  background-image: url(
+    "https://ununsplash.imgix.net/14/unsplash_5243e9ef164a5_1.JPG?q=75&fm=jpg&s=6632bd2d97938bf50cf4947a811c120c")
+}
+.artists>div:nth-of-type(11)>div {
+  background-image: url(
+    "https://ununsplash.imgix.net/photo-1416339306562-f3d12fefd36f?q=75&fm=jpg&s=dd8bffcffb3d622bea05c74d203121c6")
+}
+.artists>div:nth-of-type(12)>div {
+  background-image: url(
+    "https://ununsplash.imgix.net/41/NmnKzKIyQsyGIkFjiNsb_20140717_212636-3.jpg?q=75&fm=jpg&s=fe3f296e4d85185f2d2a35c737021147")
+}
+.artists>div:nth-of-type(13)>div {
+  background-image: url(
+    "https://unsplash.imgix.net/photo-1422938522079-7f21c8b014f6?q=75&fm=jpg&s=4276ab69afd58e6054289e086bfdc485")
+}
+.artists>div:nth-of-type(14)>div {
+  background-image: url(
+    "https://unsplash.imgix.net/uploads/1413477780213ffd2e544/2545c5cc?q=75&fm=jpg&s=635dd777d5f689eb065b57eadffe1736")
+}
+.artists>div:nth-of-type(15)>div {
+  background-image: url(
+    "https://unsplash.imgix.net/reserve/uZYSV4nuQeyq64azfVIn_15130980706_64134efc6e_o.jpg?q=75&fm=jpg&s=3acad5206f658a7de2fa6b57aa395c0f")
+}
+.artists>div:nth-of-type(16)>div {
+  background-image: url(
+    "https://unsplash.imgix.net/reserve/5okFAcEQM6YzgbICsGDM_10397138_742161639184668_9044730673519805220_o.jpg?q=75&fm=jpg&s=458429de8185d84bc86d0d62eb8fed16")
+}
+.artists>div:nth-of-type(17)>div {
+  background-image: url(
+    "https://ununsplash.imgix.net/reserve/r0r252VR6WqPRsxngGUE_telefoon%20politie.jpg?q=75&fm=jpg&s=30a261ce928af70d4f9a3fe0cf394bc3")
+}
+.artists>div:nth-of-type(18)>div {
+  background-image: url(
+    "https://ununsplash.imgix.net/photo-1422349829867-7587357f2b58?q=75&fm=jpg&s=eaa29939606a5629158205e23eab698b")
+}
+.artists>div:nth-of-type(19)>div {
+  background-image: url(
+    "https://ununsplash.imgix.net/reserve/Af0sF2OS5S5gatqrKzVP_Silhoutte.jpg?q=75&fm=jpg&s=53055e6686123f68552895b07cc77d35")
+}
+.artists>div:nth-of-type(20)>div {
+  background-image: url(
+    "https://ununsplash.imgix.net/uploads/1413259835094dcdeb9d3/6e609595?q=75&fm=jpg&s=6a4fc66161293fc4a43a6ca6f073d1c5")
+}
+.artists>div>div {
+  background-size: 100% 300%;
+  background-position: 0px -30px;
+}
+.mythumbnail {
+  display: block;
+  padding: 25px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid #222;
+  border-radius: 4px;
+  opacity: .7;
+  transition: border .2s ease-in-out;
+}
+.mythumbnail:hover{
+  opacity: 1;
+  color: white;
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+  /*font-size: 150%;*/
+ /* opacity: .4;*/
+  /*background: transparent;*/
+}
+
+/*/*
+ * DEVISE session form pages
+ -------------------------------------------------- */
+.devise {
+  max-width: 35%;
+  background: rgba(55, 55, 55, 2);
+  border-radius: 4px;
+/*    margin-top: 10px;*/
+    position: relative;
+    left: -20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: auto;
+}
+.devise input {
+  margin-bottom: 15px;
+}
+.devise input[type='submit'] {
+  margin-top: 17px;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+/*  position: absolute; !!!!<-MAKES NAVBAR HOVER OVER LOG IN*/
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+
+  .devise-wrapper {
+  /*  margin-top: 10px;
+    position: relative;
+    left: -20px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;*/
+  }
+  .devise-wrapper .container {
+  }
+  .devise-wrapper .container form {
+    /*opacity: .4;*/
+    /*background-color: transparent;*/
+    /*background-color: transparent 0.4; */
+  }
+  /*.devise-wrapper .container form .field {
+    baopacity: .9;
+  }*/
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+

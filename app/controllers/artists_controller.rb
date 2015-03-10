@@ -49,8 +49,4 @@ class ArtistsController < ApplicationController
 
 	def edit
 	end
-
-	def ask_question
-		# @artist = @question.artist.category
-	end
 end

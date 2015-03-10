@@ -2,25 +2,37 @@
 <section class="genre2">
 
 <div class="music">
-	<h1>Choose a Genre</h1>
+	<h1>All Genres</h1>
+	<p>Test your knowledge on different genres of music!</p>
 </div><!-- music -->
 
 <!-- Displays all the categories on the category page(Hip-Hop, Reggae, and R&B). -->
 
 <div class="genre">
  <% @categories.each do |category| %>
- 	<ul class="nav nav-pills nav-stacked">
+   <div class="col-md-6 col-sm-3">
+    <div class="mythumbnail">
 
-	 <li><%= link_to category.name, category %></li> 
-	</ul> <!-- nav nav-pills nav-stacked -->
-
+	 <div class="<%= category.name %>">
+	 	<h3>
+	 	<%= link_to category.name, category %>
+	 	</h3>
+	 </div>
+ </div>
+</div>
  	<% end %> 
 </div><!-- genre -->
 
+
 <div class="my_progress">
 	
-<%= button_to 'My Progress', dashboard_index_path, :id => "open-contacts-dialog-btn",
+	<%= button_to 'My Progress', dashboard_index_path, :id => "open-contacts-dialog-btn",
 :class => "inbox-sf-add-btn tip", :method => :get %>
+</div><!-- back -->
+
+<div class="back">
+	<%= button_to 'Back', dashboard_index_path, :id => "open-contacts-dialog-btn",
+:class => "button", :method => :get %>
 </div><!-- back -->
 
 </section><!-- genre2 -->

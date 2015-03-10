@@ -1,13 +1,10 @@
 
 <div class="question">
-
+  <h3 class="question_text">
+  <%= @question.text %></h3>
 
 	
-	<%= @question.text %>
-
-	<div id="player"></div>
-
-
+  <div id="player"></div>
   <%= javascript_include_tag 'https://www.youtube.com/iframe_api' %>
   <% if @question.youtube_id %>
 	<%= javascript_tag do %> 
@@ -15,14 +12,17 @@
 onYouTubeIframeAPIReady = function() {
 	console.log("iframe is ready");
 	player = new YT.Player('player', {
-          height: '390',
+          height: '360',
           width: '640',
           videoId: '<%= @question.youtube_id %>', 
           playerVars: { 'autoplay': 1, 
                         'start': 20, 
                         'end': 50, 
-                        'theme': 'light', 
-                        'autohide': 1, 
+                        'theme': 'dark',
+                        'disablekb': 1,
+                        'controls': 0,
+                        'autohide': 1,
+
                         'fs': 0, 
                         'iv_load_policy': 3, 
                         'modestbranding': 1, 
@@ -34,10 +34,13 @@ onYouTubeIframeAPIReady = function() {
 <% end %>
 <% end %>
 	
-		<% @question.options.shuffle.each do |option| %>
-		
-		<ul class="nav nav-pills nav-stacked">
-			<li><%= link_to option.text, responses_path(option: option.id, correct: params[:correct]), method: :post  %></li>
-		</ul> <!-- nav nav-pills nav-stacked -->
+  <% @question.options.shuffle.each do |option| %>
+		<div class="col-md-6 col-md-6">
+      <div class="option_thumbnail">
+			<h4><%= link_to option.text, responses_path(option: option.id, correct: params[:correct]), method: :post  %></h4>
+      </div>
+		</div > <!-- nav nav-pills nav-stacked -->
 	<% end %>
 </div> <!-- question -->
+
+

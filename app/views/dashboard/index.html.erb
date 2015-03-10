@@ -1,50 +1,4 @@
 
-
-
-
-
-
-
-
-<!-- THIS DOES NOT RANDOMIZE THE VIDEO. IT IS COMMENTED OUT. -->
-
-<!-- <section class="home">
-
-<div class="youtube">
-
-<div class="dash">
-	<h1>Your Dashboard</h1>
-</div>
-
-	<div id="player"></div>
-	<div id="options">
-		
-
-	</div>
-</div>
-
-
-
-			<% @question.options.each do |option| %>
-			  <%= option %>
-			<% end %>
-
-	</div><!-- player -->
-</div><!-- options -->
-
-
-
-
- 
-
-
-
-<!-- THIS PLAYS THE ACTUAL VIDEO!!!! -->
-
-
-
-</section>
-
 <!-- Displays a leaderboard for Players -->
 <section class="home-content">
   <div class="leader_board">
@@ -67,34 +21,8 @@
 <div class="start">
 
 <%= button_to 'Start Game', categories_path, :id => "open-contacts-dialog-btn",
-:class => "inbox-sf-add-btn tip", :method => :get %>
+:class => "button", :method => :get %>
+
 </div>
 
-</section>
 
-<%= javascript_tag do %>
-
-onYouTubeIframeAPIReady = function() {
-	console.log("iframe is ready");
-	player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: '<%= @question.youtube_id %>', 
-          playerVars: { 'autoplay': 1, 
-                        'start': 20, 
-                        'end': 50, 
-                        'theme': 'light', 
-                        'autohide': 1, 
-                        'fs': 0, 
-                        'iv_load_policy': 3, 
-                        'modestbranding': 1, 
-                        'rel': 0, 
-                        'showinfo': 0},
-          //events: {
-          //  'onReady': onPlayerReady,
-          //  'onStateChange': onPlayerStateChange
-          //}
-        }
-    );
-}
-<% end %>
