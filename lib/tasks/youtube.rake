@@ -109,19 +109,20 @@ require 'rss'
 
 					options_chosen = []
 
-					Option.where(artist: artist).shuffle.each do |option|
-						if options_chosen.count < 3
-							unless options_chosen.include?(option)
-								options_chosen.push(
-								Option.create(
-									text: option.text,
-									correct: false,
-									question: question
-								)	)
-							end
-						else
-							break
+					randomized_options = Option.joins(:question => :artist).shuffle
+
+					selected_options = randomized_options.first(3)
+
+					selected_options.each do |option|
+						unless options_chosen.include?(option)
+							new_option = Option.create(
+								text: option.text,
+								correct: false,
+								question: question
+							)
+							options_chosen << new_option
 						end
+						
 					end
 				end
 			end
@@ -129,6 +130,7 @@ require 'rss'
 
 
 namespace :pf do
+	desc 'Load all the external media feeds'
 	task runfeed: :environment do
 		hiphop_feeds.each do |feed_url|
 			ingest_feed(feed_url, Category.find_or_create_by(name: "Hip Hop"))
