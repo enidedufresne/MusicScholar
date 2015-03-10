@@ -3,22 +3,35 @@
 
 
 <div class="pick_an_artist">
-<h1>Pick an artist</h1>
+<h1>Artists</h1>
+<p>Choose from among your favorite artists and musicians</p>
 </div><!--  pick_an artist -->
 
 <!-- Displays all artists name from each genre of music. -->
 
 <div class="artists">
 <% @category.artists.each do |artist| %>
-<ul class="nav nav-pills nav-stacked">
+	<div class="col-md-8 col-md-4">
+	<div class="mythumbnail">
 
-	<li><%= link_to artist.name, category_artist_path(artist.category, artist) %></li>
-</ul> <!-- nav nav-pills nav-stacked -->
-<% end %>
+	<div class="<%= artist.name %>">
+		<h3>
+			<%= link_to artist.name, category_artist_path(artist.category, artist) %>
+		</h3>
+	</div><!-- artist.name -->
+ </div><!-- mythumbnail -->
+</div><!-- col-md-6 col-sm-3 -->
+ 	<% end %> 
+</div><!-- artists -->
+
+
 
 <div class="choose_another_genre">
 <%= button_to 'Pick another genre', categories_path, :id => "open-contacts-dialog-btn",
-:class => "inbox-sf-add-btn tip", :method => :get %>
+:class => "button", :method => :get %>
 </div> <!-- artists -->
 </div> <!-- choose_another_genre -->
+
+
 </section> <!-- styling_artist_page -->
+<!-- inbox-sf-add-btn tip -->

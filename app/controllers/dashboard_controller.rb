@@ -4,14 +4,13 @@ class DashboardController < ApplicationController
 	def index
 		# @question = Question.last
 		@question = Question.take
-	end
-
-	def new
 		@question = Question.order("RANDOM()").first
 	end
 
-	def edit
-	end
+	# def new
+	# 	@question = Question.order("RANDOM()").first
+	# end
 
-
+	# def edit
+	# end
 end

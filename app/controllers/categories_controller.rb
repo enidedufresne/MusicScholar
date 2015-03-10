@@ -7,6 +7,11 @@ class CategoriesController < ApplicationController
 
 	def index
 		@categories = Category.all
+
+
+		# @categories each do |c| c.className = c.name...
+		# (db) 'Hip Hop' = (category.className) hip-hop
+		# .hip-hop { background-image:url() }
 	end
 
 	def show

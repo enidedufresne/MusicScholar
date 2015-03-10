@@ -1,72 +1,72 @@
-<!-- THIS DOES NOT RANDOMIZE THE VIDEO. IT IS COMMENTED OUT. -->
 
-<!-- <section class="home">
-
-<div class="youtube">
-
-<div class="dash">
-	<h1>Your Dashboard</h1>
-</div>
-
-	<div id="player"></div>
-	<div id="options">
-		
-
-	</div>
-</div>
-
-<<<<<<< HEAD
-=======
-
-			<% @question.options.each do |option| %>
-			  <%= option %>
-			<% end %>
-
-	</div><!-- player -->
-</div><!-- options -->
-
-
->>>>>>> 0b8de58a394b22f1c11154fda464b569970f39d3
-
-<div class="start">
- -->
-
-
-
-<!-- THIS PLAYS THE ACTUAL VIDEO!!!! -->
 
 <%= button_to 'Start Game', categories_path, :id => "open-contacts-dialog-btn",
-:class => "inbox-sf-add-btn tip", :method => :get %>
+:class => "button", :method => :get %>
 
+<div class="row">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="https://stocksnap.io/img-thumbs/280h/ESHERXYHC0.jpg" alt="something">
+      <div class="caption">
+        <h3>Hip Hop</h3>
+        <p>Cupcake ipsum dolor sit.</p>
+      </div>
+    </div>
+  </div>
 </div>
-</section>
-<section class="home-content">
 
-</section>
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="https://stocksnap.io/img-thumbs/280h/PYOYP07N8T.jpg">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="https://stocksnap.io/img-thumbs/280h/MKRJQ6V917.jpg" alt="mixer">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="https://stocksnap.io/img-thumbs/280h/ESHERXYHC0.jpg" alt="mixer">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="https://stocksnap.io/img-thumbs/280h/6REQ95CNQ8.jpg" alt="mixer">
+    </a>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
 
-<%= javascript_tag do %>
-
-onYouTubeIframeAPIReady = function() {
-	console.log("iframe is ready");
-	player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: '<%= @question.youtube_id %>', 
-          playerVars: { 'autoplay': 1, 
-                        'start': 20, 
-                        'end': 50, 
-                        'theme': 'light', 
-                        'autohide': 1, 
-                        'fs': 0, 
-                        'iv_load_policy': 3, 
-                        'modestbranding': 1, 
-                        'rel': 0, 
-                        'showinfo': 0},
-          //events: {
-          //  'onReady': onPlayerReady,
-          //  'onStateChange': onPlayerStateChange
-          //}
-        }
-    );
-}
-<% end %>
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="https://stocksnap.io/img-thumbs/280h/O48AVVP4L8.jpg" alt="mixer">
+      <div class="caption">
+        <h3>Thumbnail label</h3>
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="https://stocksnap.io/img-thumbs/280h/L695JG265J.jpg" alt="mixer">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="https://stocksnap.io/img-thumbs/280h/RJWNF1GVHZ.jpg" alt="mixer">
+    </a>
+  </div>
+  <div class="col-xs-6 col-md-3">
+    <a href="#" class="thumbnail">
+      <img src="https://stocksnap.io/img-thumbs/280h/57BE1EA682.jpg" alt="mixer">
+    </a>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+</div>
