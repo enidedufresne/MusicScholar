@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150304133211) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "artists", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at",  null: false
@@ -21,7 +24,7 @@ ActiveRecord::Schema.define(version: 20150304133211) do
     t.string   "rss_url"
   end
 
-  add_index "artists", ["category_id"], name: "index_artists_on_category_id"
+  add_index "artists", ["category_id"], name: "index_artists_on_category_id", using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -43,7 +46,7 @@ ActiveRecord::Schema.define(version: 20150304133211) do
     t.integer  "question_id"
   end
 
-  add_index "options", ["question_id"], name: "index_options_on_question_id"
+  add_index "options", ["question_id"], name: "index_options_on_question_id", using: :btree
 
   create_table "players", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -60,8 +63,8 @@ ActiveRecord::Schema.define(version: 20150304133211) do
     t.datetime "updated_at"
   end
 
-  add_index "players", ["email"], name: "index_players_on_email", unique: true
-  add_index "players", ["reset_password_token"], name: "index_players_on_reset_password_token", unique: true
+  add_index "players", ["email"], name: "index_players_on_email", unique: true, using: :btree
+  add_index "players", ["reset_password_token"], name: "index_players_on_reset_password_token", unique: true, using: :btree
 
   create_table "questions", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -71,7 +74,7 @@ ActiveRecord::Schema.define(version: 20150304133211) do
     t.string   "youtube_id"
   end
 
-  add_index "questions", ["artist_id"], name: "index_questions_on_artist_id"
+  add_index "questions", ["artist_id"], name: "index_questions_on_artist_id", using: :btree
 
   create_table "responses", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -80,7 +83,12 @@ ActiveRecord::Schema.define(version: 20150304133211) do
     t.integer  "option_id"
   end
 
-  add_index "responses", ["option_id"], name: "index_responses_on_option_id"
-  add_index "responses", ["player_id"], name: "index_responses_on_player_id"
+  add_index "responses", ["option_id"], name: "index_responses_on_option_id", using: :btree
+  add_index "responses", ["player_id"], name: "index_responses_on_player_id", using: :btree
 
+  add_foreign_key "artists", "categories"
+  add_foreign_key "options", "questions"
+  add_foreign_key "questions", "artists"
+  add_foreign_key "responses", "options"
+  add_foreign_key "responses", "players"
 end
