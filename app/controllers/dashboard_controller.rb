@@ -2,7 +2,6 @@ class DashboardController < ApplicationController
 	before_filter :authenticate_player!
 
 	def index
-		# @question = Question.last
 		@question = Question.take
 		@players = Player.all
 	end
