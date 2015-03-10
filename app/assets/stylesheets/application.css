@@ -420,3 +420,9 @@ color: #fff;
   }
 }
 
+.current_points {
+  text-align: center;
+  font-size: 19px;
+  color: yellow;
+}
+
