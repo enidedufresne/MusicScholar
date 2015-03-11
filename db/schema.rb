@@ -86,9 +86,4 @@ ActiveRecord::Schema.define(version: 20150304133211) do
   add_index "responses", ["option_id"], name: "index_responses_on_option_id", using: :btree
   add_index "responses", ["player_id"], name: "index_responses_on_player_id", using: :btree
 
-  add_foreign_key "artists", "categories"
-  add_foreign_key "options", "questions"
-  add_foreign_key "questions", "artists"
-  add_foreign_key "responses", "options"
-  add_foreign_key "responses", "players"
 end
