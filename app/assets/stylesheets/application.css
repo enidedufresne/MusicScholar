@@ -43,27 +43,12 @@ body {
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
 }
 
-
-
 input[type='text'] { 
 	font-size: 24px; 
 	font-family: monospace;
 	color: #333;
 }
-/*li .artistbutton {
-  border-radius: .9;
-  border: 5px solid red;
-  margin-right: 100px;
-  width: 50px;
-  height: 30px;
-  display: inline;
-  list-style-type: none;
-  padding: .2em 1em;
- /* color: #036;*/
-/*}
-li .artistbutton a {
-  text-decoration: none;
-}*/
+
 
 /*/*
  * VIDEO - Artists Show Page
@@ -73,11 +58,9 @@ li .artistbutton a {
 text-align: right;
 color: #eee;
 }
-
 .player_nav:hover {
 color: #fff;
 }
-
 .question {
   text-align: center;
 }
@@ -247,9 +230,6 @@ color: #fff;
   opacity: 1;
   color: white;
   text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
-  /*font-size: 150%;*/
- /* opacity: .4;*/
-  /*background: transparent;*/
 }
 
 /*/*
@@ -301,7 +281,7 @@ color: #fff;
 }
 
 
-/* CUSTOMIZE THE CAROUSEL
+/* CAROUSEL - home page
 -------------------------------------------------- */
 
 /* Carousel base class */
@@ -392,26 +372,6 @@ color: #fff;
   .featurette-heading {
     font-size: 50px;
   }
-
-  .devise-wrapper {
-  /*  margin-top: 10px;
-    position: relative;
-    left: -20px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 15px;
-    padding-bottom: 15px;*/
-  }
-  .devise-wrapper .container {
-  }
-  .devise-wrapper .container form {
-    /*opacity: .4;*/
-    /*background-color: transparent;*/
-    /*background-color: transparent 0.4; */
-  }
-  /*.devise-wrapper .container form .field {
-    baopacity: .9;
-  }*/
 }
 
 @media (min-width: 992px) {
@@ -420,9 +380,49 @@ color: #fff;
   }
 }
 
+/* SCORE points system
+-------------------------------------------------- */
 .current_points {
-  text-align: center;
-  font-size: 19px;
+  font-size: 14px;
   color: yellow;
+  padding-top: 15px;
+  margin-left: 15px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: auto;
+  text-align: -webkit-match-parent;
+  list-style: none;
+  visibility: visible!important;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  box-sizing: border-box;
 }
 
+/*/*
+ * DASHBOARD- aka Leader Board Index Page
+ -------------------------------------------------- */
+.home-content {
+  text-align: center;
+}
+.genre2 {
+  text-align: center;
+}
+.table-responsive{
+  text-align: left;
+
+}
+.center-table {
+  margin: 0 auto !important;
+  float: none !important;
+  border-radius: 4px;
+}
+.panel {
+  margin: 0 auto ;
+  margin-bottom: 20px;
+  float: none !important;
+  border-radius: 4px;
+  background-color: #646464;
+}

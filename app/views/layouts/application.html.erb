@@ -51,36 +51,32 @@
                     <li><a href="#">Profile</a></li>
                   </ul>
                 </li>
+                <li class="current_points"><p>Score: <%= current_player.points rescue nil %></li>
               </ul>
+
+              
+
             </div>
           </div>
         </nav>
-
       </div>
     </div>
 
     
 <div class="player_nav">
-
-	<% if player_signed_in? %>
-
-  <div class="current_points">
-  <p>Correct:</p><%= current_player.points %>
-</div>
-		Signed in as <strong><%= current_player.email %></strong>. 
-
-		Signed in as <strong><%= current_player.email %></strong>.<br> 
-
-		Not you?|
-		<%= link_to "Log Out", destroy_player_session_path, :method => :delete %>
+  <% if player_signed_in? %>
+    Signed in as <strong><%= current_player.email %></strong>.<br> 
+    Not you?|
+    <%= link_to "Log Out", destroy_player_session_path, :method => :delete %>
 	<% else %>
-		<%= link_to "Sign Up", new_player_registration_path %> or <%= link_to "Log In", new_player_session_path %>
+    <%= link_to "Sign Up", new_player_registration_path %> or <%= link_to "Log In", new_player_session_path %>
 	<% end %>
 </div>
 
 <% flash.each do |name, msg| %>
 <%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>
+
 
 <%= yield %>
 

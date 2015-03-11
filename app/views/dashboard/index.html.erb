@@ -1,33 +1,42 @@
 
 <!-- Displays a leaderboard for Players -->
 <section class="home-content">
-  <div class="leader_board">
-  <h1>Leader Board</h1>
-</div>
-  <table border="1" style="width:100%">
-<div class="player_leaderboard">
-<p>Player(s)</p>
-</div>
-<div class="points_leaderboard">
-<p>Points</p>
-</div>
-<% @players.each do |player| %> 
-  <tr>
-    <td><%= player.email %></td> 
-    <td><%= player.points %></td>
-  </tr>
-<% end %>
-</table>
+	<div class="leader_board">
+		<h1>Leader Board</h1>
+		<h5>Find out how you stack up against your friends</h5>
+	</div>
 
-<div class="start">
+  
 
-<%= button_to 'Start Game', categories_path, :id => "open-contacts-dialog-btn",
-:class => "button", :method => :get %>
+	<div class="panel panel-default table-responsive" style="width:75%">
+		<table class="table center-table table-bordered table-hover" style="width:75%">
+			<thead>
+				<tr>
+					<th>Player</th>
+					<th>Score</th>
+					<th>All Time Score</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @players.each do |player| %> 
+				<tr>
+					<td><%= player.email %></td> 
+					<td><%= player.points %></td>
+					<td><%= rank = (player.points) + 1 %></td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+	</div>
 
-</div>
 
+	<div class="start">
+		<%= button_to 'Start Game', categories_path, :id => "open-contacts-dialog-btn",
+	:class => "button", :method => :get %>
 
-</div>
+	</div>
+</section> 
+
 
 
 
