@@ -26,6 +26,7 @@ a:hover {
   padding: 10px 20px;
   font-weight: bold;
   border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 /*/*
@@ -401,7 +402,7 @@ div .devise_alert {
 -------------------------------------------------- */
 .current_points {
   font-size: 14px;
-  color: yellow;
+  color: #ffff99;
   padding-top: 15px;
   margin-left: 15px;
   position: relative;
