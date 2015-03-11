@@ -11,7 +11,7 @@
 #
 
 class Question < ActiveRecord::Base
-	has_many :options :dependent => :destroy
+	has_many :options, :dependent => :destroy
 	belongs_to :artist
 	belongs_to :category
 	has_many :responses, through: :options
