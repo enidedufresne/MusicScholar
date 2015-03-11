@@ -237,6 +237,9 @@ color: #fff;
   color: white;
   text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
+.styling_artist_page {
+  text-align: center;
+}
 
 /*/*
  * DEVISE session form pages
@@ -403,7 +406,7 @@ div .devise_alert {
 .current_points {
   font-size: 13px;
   color: #ffff99;
-  padding-top: 15px;
+  padding-top: 17px;
   margin-left: 15px;
   position: relative;
   display: block;
@@ -444,7 +447,8 @@ div .devise_alert {
   border-radius: 4px;
   background-color: #646464;
 }
-
 .developer {
   text-align: center;
 }
+
+
