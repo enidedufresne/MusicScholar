@@ -17,8 +17,9 @@
 
 	<div class="<%= artist.name %>">
 		<h3>
-			<%= link_to artist.name, category_artist_path(artist.category, artist) %>
+			<%= link_to artist.name, category_artist_path(artist.category, artist), class: 'qwerty' %>
 		</h3>
+		<!-- JQUERY!!! for clickable action to tumbnail -->
 	</div><!-- artist.name -->
  </div><!-- mythumbnail -->
 </div><!-- col-md-6 col-sm-3 -->
