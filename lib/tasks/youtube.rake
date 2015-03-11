@@ -69,7 +69,6 @@ require 'rss'
 			'http://gdata.youtube.com/feeds/base/users/SherylCrowVEVO/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile',
 			'http://gdata.youtube.com/feeds/base/users/NirvanaVEVO/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile',
 			'http://gdata.youtube.com/feeds/base/users/OneRepublicVEVO/uploads?alt=rss&v=2&orderby=published&client=ytapi-youtube-profile'
-
 		]
 
 		def ingest_feed(url, category)
