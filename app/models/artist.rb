@@ -12,6 +12,6 @@
 
 class Artist < ActiveRecord::Base
 	belongs_to :category
-	has_many :questions
+	has_many :questions, :dependent => :destroy
 	has_many :facts
 end
