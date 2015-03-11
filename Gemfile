@@ -7,15 +7,6 @@ gem 'awesome_print', '~> 1.6.1'
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 5.0'
 
-group :development do
-  gem 'sqlite3'
-end
-
-
-group :development do
-  gem 'pg'
-end
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -59,11 +50,17 @@ group :development, :test do
   #Displays better errors so we can understand wtf is going on. ;)
   gem 'binding_of_caller'
   gem 'better_errors'
+  gem 'annotate'
+  gem 'sqlite3'
 end
 
-group :development do 
-  gem 'annotate'
+group :production do
+  gem 'pg', '~> 0.18.1'
+  gem 'rails_12factor'
 end
+
+
+
 
 
 
