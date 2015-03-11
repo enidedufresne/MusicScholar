@@ -19,7 +19,8 @@
             <div class="carousel-caption">
               <h1>Welcome to MUSICscholar</h1>
               <p>The best free source of music fun on the web! </p>
-              <p><a class="button" href="#" role="button">Let's Play!</a></p>
+            <%= button_to "Let's Play!", categories_path, :id => "open-contacts-dialog-btn",
+  :class => "button", :method => :get %>
             </div>
           </div>
         </div>
@@ -29,7 +30,8 @@
             <div class="carousel-caption">
               <h1>Listen and Watch</h1>
               <p>Music videos eaturing popular artists from your favorite genres.</p>
-              <p><a class="button" href="#" role="button">Let's Play!</a></p>
+              <%= button_to "Let's Play!", categories_path, :id => "open-contacts-dialog-btn",
+  :class => "button", :method => :get %>
             </div>
           </div>
         </div>
@@ -39,7 +41,8 @@
             <div class="carousel-caption">
               <h1>Rank It Up</h1>
               <p>Challenge your friends and make it to the top of the leader board to become the ultimate music scholar!</p>
-              <p><a class="button" href="#" role="button">Let's Play!</a></p>
+              <%= button_to "Let's Play!", categories_path, :id => "open-contacts-dialog-btn",
+  :class => "button", :method => :get %>
             </div>
           </div>
         </div>
