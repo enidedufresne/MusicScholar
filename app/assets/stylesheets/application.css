@@ -57,7 +57,11 @@ input[type='text'] {
 .player_nav {
 text-align: right;
 color: #eee;
-margin-right: 40px;
+margin-right: 18px;
+font-size: 10px;
+color: #9d9d9d;
+line-height: 1.5;
+padding-top: 19px;
 }
 .player_nav:hover {
 color: #fff;
@@ -255,7 +259,11 @@ color: #fff;
 .devise input[type='submit'] {
   margin-top: 17px;
 }
-
+div .devise_alert {
+  font-size: 10px;
+  position: right;
+  margin: 40px;
+}
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
@@ -411,7 +419,7 @@ color: #fff;
 }
 
 /*/*
- * DASHBOARD- aka Leader Board Index Page
+ * DASHBOARD- aka Leaderboard Index Page
  -------------------------------------------------- */
 .home-content {
   text-align: center;
