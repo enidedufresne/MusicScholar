@@ -13,8 +13,10 @@ Rails.application.routes.draw do
 
   get '/categories' => 'categories#index'
   get '/artists' => 'artists#index'
+  get 'index2' => 'home#index'
+  get 'index23' => 'artists#index'
   post '/responses' => 'artists#create_response'
-  root :to => "home#index"
+  root :to => 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

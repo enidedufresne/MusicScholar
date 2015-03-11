@@ -9,6 +9,9 @@ class ArtistsController < ApplicationController
 		@artist = Artist.all
 	end
 
+	def index23
+	end
+
 	def show
 		@artist = Artist.find(params[:id])
 		if current_player
@@ -24,6 +27,12 @@ class ArtistsController < ApplicationController
 	end
 
 	def create
+  	end
+
+  	def artists
+  	end
+
+  	def contact
   	end
 
 	def participant
